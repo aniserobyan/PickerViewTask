@@ -14,8 +14,6 @@ class CustomView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
     @IBOutlet weak var inputField: UITextField!
     
     @IBAction func clickTapped(_ sender: UIButton) {
-        
-        
         var characters = Array((self.inputField.text ?? "").characters).map({ String(describing: $0) })
         
         while characters.count < 5 {
@@ -26,7 +24,6 @@ class CustomView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
         }
         
         self.inputField.resignFirstResponder()
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -52,7 +49,6 @@ class CustomView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
             self.inputField.textColor = newValue
         }
     }
-    
     
     @IBInspectable var inputBgColor: UIColor? {
         get {
@@ -85,7 +81,6 @@ class CustomView: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UITextFi
         
         self.addSubview(view)
     }
-    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 5
